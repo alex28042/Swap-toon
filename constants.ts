@@ -1,4 +1,4 @@
-import { Token } from './types';
+import { Token, LiquidityPool, DailyData } from './types';
 
 export const TOKENS: Token[] = [
   {
@@ -53,3 +53,37 @@ export const MOCK_RATES: Record<string, number> = {
   'DOGE': 0.12,
   'PEPE': 0.000008
 };
+
+export const POOLS: LiquidityPool[] = [
+  {
+    id: 'btc-usdc',
+    tokenA: TOKENS[0], // BTC
+    tokenB: TOKENS[3], // USDC
+    apr: 12.5,
+    tvl: '$45M'
+  },
+  {
+    id: 'eth-sol',
+    tokenA: TOKENS[1], // ETH
+    tokenB: TOKENS[2], // SOL
+    apr: 24.8,
+    tvl: '$12M'
+  },
+  {
+    id: 'pepe-doge',
+    tokenA: TOKENS[5], // PEPE
+    tokenB: TOKENS[4], // DOGE
+    apr: 420.69,
+    tvl: '$2M'
+  }
+];
+
+export const MOCK_CHART_DATA: DailyData[] = [
+  { day: 'Lun', value: 12320 },
+  { day: 'Mar', value: 12380 },
+  { day: 'Mié', value: 12350 },
+  { day: 'Jue', value: 12410 },
+  { day: 'Vie', value: 12440 },
+  { day: 'Sáb', value: 12510 },
+  { day: 'Dom', value: 12450.32 }
+];
